@@ -14,6 +14,7 @@ fn is_negative(num: f64) -> bool {
 // Function to convert an input number of bytes to a human readable string
 // in: f64, bool
 // out: String
+#[allow(clippy::needless_return)]
 pub fn convert(num: f64, bin: bool) -> String {
     let mut negative = "";
     if is_negative(num) {
@@ -36,7 +37,7 @@ pub fn convert(num: f64, bin: bool) -> String {
         // Binary case (MiB)
         if num < 1024_f64 {
             // Just display as bytes
-            format!("{}{} {}", negative, num, "B")
+            return format!("{}{} {}", negative, num, "B");
         } else {
             //now the fun bit
             let delim = 1024_f64;
@@ -49,12 +50,12 @@ pub fn convert(num: f64, bin: bool) -> String {
                 .parse::<f64>()
                 .unwrap();
             let unit = bin_units[exp as usize];
-            format!("{}{} {}", negative, out, unit)
+            return format!("{}{} {}", negative, out, unit);
         }
     } else {
         // Decimal case (MB)
         if num < 1000_f64 {
-            format!("{}{} {}", negative, num, "B")
+            return format!("{}{} {}", negative, num, "B");
         } else {
             let delim = 1000_f64;
             // Calculate the exponent to raise the delimiter to the power of.
@@ -69,7 +70,7 @@ pub fn convert(num: f64, bin: bool) -> String {
                 .parse::<f64>()
                 .unwrap();
             let unit = dec_units[exp as usize];
-            format!("{}{} {}", negative, out, unit)
+            return format!("{}{} {}", negative, out, unit);
         }
     }
 }
