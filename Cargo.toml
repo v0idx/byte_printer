@@ -2,7 +2,7 @@
 name = "byte_printer"
 description = "Simple utility to convert from an amount of bytes (as f64) to a human readable string in either decimal (GB) or binary (GiB) formatting."
 repository = "https://github.com/v0idx/byte_printer"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 license = "BSD-2-Clause"
 
