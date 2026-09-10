@@ -1,8 +1,9 @@
 [package]
 name = "byte_printer"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "Simple utility to convert from an amount of bytes (as f64) to a human readable string in either decimal (GB) or binary (GiB) formatting."
+repository = "https://github.com/v0idx/byte_printer"
+version = "0.2.0"
+edition = "2024"
+license = "BSD-2-CLAUSE"
 
 [dependencies]
