@@ -1,5 +1,5 @@
 // Byte Printer - 2026
-// Eloise Nash - https://v0idx.com
+// Copyright (c) 2022, Eloise Nash
 // Rust utility to convert a number of bytes (f64) to a formatted String e.g. "300 KiB"
 
 use std::cmp;
