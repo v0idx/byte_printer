@@ -4,6 +4,6 @@ description = "Simple utility to convert from an amount of bytes (as f64) to a h
 repository = "https://github.com/v0idx/byte_printer"
 version = "0.2.0"
 edition = "2024"
-license = "BSD-2-CLAUSE"
+license = "BSD-2-Clause"
 
 [dependencies]
